@@ -15,14 +15,16 @@ def create_app(config_class=Config):
 
     # Import and register blueprints
     from routes.home_view import home_bp
+    from routes.login_views import login_bp
     from routes.google_oauth import google_oauth_bp
     from routes.github_oauth import github_oauth_bp
-    from routes.login_views import login_bp
+    from routes.linkedin_oauth import linkedin_oauth_bp
 
     app.register_blueprint(home_bp)
     app.register_blueprint(login_bp)
     app.register_blueprint(google_oauth_bp)
     app.register_blueprint(github_oauth_bp)
+    app.register_blueprint(linkedin_oauth_bp)
 
     return app
 

@@ -5,7 +5,7 @@ from utilities.login_manager import login_manager
 
 class User(db.Model, UserMixin):
     __tablename__ = "user"
-    id = db.Column(db.Integer)
+    id = db.Column(db.String(100))
     user_id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100))
     email = db.Column(db.String(150), unique=True)
@@ -25,5 +25,4 @@ class User(db.Model, UserMixin):
 
 @login_manager.user_loader
 def load_user(user_id):
-    print(user_id)
     return User.query.get(user_id)

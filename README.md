@@ -3,3 +3,4 @@
 ### Implemented providers:
 1. Google
 2. Github
+3. LinkedIn
