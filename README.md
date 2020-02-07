@@ -1,2 +1,5 @@
-# flask-oauth2-examples
-OAuth2 examples with flask
+# OAuth2 Examples with Flask
+
+### Implemented providers:
+1. Google
+2. Github
